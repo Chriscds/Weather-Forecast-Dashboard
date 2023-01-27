@@ -31,31 +31,41 @@ $("#search-button").on("click", function (event) {
     
     // log url query
     // Console logs the result of celsius with only two didgets after the decimal.
-    console.log(celsius.toFixed(2) + " C");
+    console.log(celsius.toFixed(2) + " &#8451");
 
         // log response
 
-    // variables for different results to store:
-    // City
-    // var cityName = response.;
+// Content to transfer to HTML
 
-    // Date
-    // var date = response.
+    // create div to display the results of the search query/variables below 
+    // to prepend to ID #today section
+        var todaysWeather = $('<div class="current-weather">');
+
+    // variables for different results to store:
+
+    // City (h2)
+    var searchedCity = response.name;
+    var cityName = $('<h2>').text(searchedCity);
+    todaysWeather.append(cityName);
+
+    // Date (h2)
+    // var date = response.;
+    var todaysDate;
 
     // Weather Icon
     // var weatherIcon = response.
 
-    // Temperature
-    // var temp = response.;?
+    // Temperature (p)
+    // var temp = response.main.temp;
 
-    // Wind
+    // Wind (p)
     // var windSpeed = response.;
 
-    // Humidity
+    // Humidity (p)
     // var humidity = response.;
 
-    // content to transfer to HTML
-
-    })
+// Prepend to #today 
+        $("#today").prepend(todaysWeather);
+    });
 
 });
