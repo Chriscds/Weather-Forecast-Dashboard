@@ -26,14 +26,35 @@ $("#search-button").on("click", function (event) {
 
     // Temperature convertion: Kelvin = - 273.15
     var kelvin = response.main.temp;
-    var celsius = kelvin -273.15; // Need to change result in to 2 digits after decimal
+    var celsius = kelvin -273.15; 
 
+    
     // log url query
-    console.log(celsius + " C");
+    // Console logs the result of celsius with only two didgets after the decimal.
+    console.log(celsius.toFixed(2) + " C");
 
         // log response
 
-        // content to transfer to HTML
+    // variables for different results to store:
+    // City
+    // var cityName = response.;
+
+    // Date
+    // var date = response.
+
+    // Weather Icon
+    // var weatherIcon = response.
+
+    // Temperature
+    // var temp = response.;?
+
+    // Wind
+    // var windSpeed = response.;
+
+    // Humidity
+    // var humidity = response.;
+
+    // content to transfer to HTML
 
     })
 
