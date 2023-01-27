@@ -46,7 +46,7 @@ $("#search-button").on("click", function (event) {
 
     // City (h2)
     var searchedCity = response.name;
-    var cityName = $('<h2>').text(searchedCity + degreesSymbol);
+    var cityName = $('<h2>').text(searchedCity);
     todaysWeather.append(cityName);
 
     // Date (h2)
@@ -57,7 +57,9 @@ $("#search-button").on("click", function (event) {
     // var weatherIcon = response.
 
     // Temperature (p)
-    // var temp = response.main.temp;
+    // temperature is coming from variable ln 29 var celsius = kelvin -273.15;
+    var tempToday = $('<p>').text("Temp: " + celsius.toFixed(2) + degreesSymbol + " C");
+    todaysWeather.append(tempToday);
 
     // Wind (p)
     // var windSpeed = response.;
