@@ -26,12 +26,13 @@ $("#search-button").on("click", function (event) {
 
     // Temperature convertion: Kelvin = - 273.15
     var kelvin = response.main.temp;
-    var celsius = kelvin -273.15; 
+    var celsius = kelvin -273.15;
+    var degreesSymbol = '\u00B0';
 
     
     // log url query
     // Console logs the result of celsius with only two didgets after the decimal.
-    console.log(celsius.toFixed(2) + " &#8451");
+    console.log(celsius.toFixed(2) + " C");
 
         // log response
 
@@ -45,7 +46,7 @@ $("#search-button").on("click", function (event) {
 
     // City (h2)
     var searchedCity = response.name;
-    var cityName = $('<h2>').text(searchedCity);
+    var cityName = $('<h2>').text(searchedCity + degreesSymbol);
     todaysWeather.append(cityName);
 
     // Date (h2)
