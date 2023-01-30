@@ -1,1 +1,19 @@
-
+/* Page header background */
+.weather-header {
+    background:linear-gradient(89deg, rgb(255, 255, 255) 0%, rgba(0, 75, 212, 1) 0%, rgba(130, 238, 225, 1) 89%);
+    margin-bottom: 15px;
+}
+.weather-header h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+/* set properties for main weather box */
+.current-weather {
+    border: 1px solid black;
+    margin-right: 30px;
+}
+.current-weather h2, p {
+    padding-left: 8px;
+}
+/*  */

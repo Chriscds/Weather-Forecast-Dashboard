@@ -33,6 +33,7 @@ $("#search-button").on("click", function (event) {
     var kelvin = response.main.temp;
     var celsius = kelvin -273.15;
     var degreesSymbol = '\u00B0';
+    
     // Current weather icon for today
     var currentIcon = response.weather[0].icon;
     todaysIcon = weatherIcon + currentIcon + "@2x.png";
