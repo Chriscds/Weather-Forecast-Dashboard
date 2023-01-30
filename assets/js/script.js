@@ -5,7 +5,8 @@ var apiKey = "&appid=50e333b7d0f2f6f179249a41b9ce7e72";
 // empty variable to assign within the search function.
 var queryUrlAndKey;
 
-
+// Add date with moment.js ----------------------------------------------------------------
+var today = moment().format("[(] D [/] MM [/] YYYY [)]");
 
 // funtion to search on click after input #search-input.
 $("#search-button").on("click", function (event) {
@@ -46,7 +47,7 @@ $("#search-button").on("click", function (event) {
 
     // City (h2)
     var searchedCity = response.name;
-    var cityName = $('<h2>').text(searchedCity);
+    var cityName = $('<h2>').text(searchedCity + " " + today);
     todaysWeather.append(cityName);
 
     // Date (h2)
