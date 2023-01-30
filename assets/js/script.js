@@ -35,9 +35,11 @@ $("#search-button").on("click", function (event) {
     var degreesSymbol = '\u00B0';
     // Current weather icon for today
     var currentIcon = response.weather[0].icon;
-    // todaysIcon = weatherIcon + currentIcon + "@2x.png";
+    todaysIcon = weatherIcon + currentIcon + "@2x.png";
+    var iconImage = $("<img>").attr("src", todaysIcon);
+    var iconImageNew = JSON.stringify(todaysIcon)
 
-    
+    console.log(todaysIcon);
     // log url query
     // Console logs the result of celsius with only two didgets after the decimal.
     console.log(celsius.toFixed(2) + " C");
@@ -52,11 +54,12 @@ $("#search-button").on("click", function (event) {
 
     // City (h2)
     var searchedCity = response.name;
-    var iconTest = $('<img src="http://openweathermap.org/img/wn/">').text(currentIcon + "@2xpng")
+    // var iconTest = $('<img src="http://openweathermap.org/img/wn/">').text(currentIcon + "@2xpng")
     // var iconCity = ;
-    var cityName = $('<h2>').text(searchedCity + " " + today + " " + todaysIcon);
-    // var cityName = $('<h2>').text(searchedCity + " " + today + " " + iconCity); // ?????
+    var cityName = $('<h2>').text(searchedCity + " " + today);
+    // var cityName = $('<h2>').text(searchedCity + " " + today + " " + iconImage); // ?????
     todaysWeather.append(cityName);
+    iconImage.append(iconImageNew);
 
     // Date (h2)
     // var date = response.;
@@ -82,6 +85,7 @@ $("#search-button").on("click", function (event) {
 
 // Prepend to #today 
         $("#today").prepend(todaysWeather);
+        $(".current-weather").prepend(iconImage)
         // clears search box after button is clicked and result is fetched.
         $("#search-input").val("");
     });
