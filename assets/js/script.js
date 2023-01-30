@@ -9,6 +9,8 @@ var queryUrlAndKey;
 
 // funtion to search on click after input #search-input.
 $("#search-button").on("click", function (event) {
+    // clear the #today div and replace with the current search.
+    $("#today").empty();
     event.preventDefault();
     // variable for search input value.
     var searchInput = $("#search-input").val();
@@ -71,6 +73,8 @@ $("#search-button").on("click", function (event) {
 
 // Prepend to #today 
         $("#today").prepend(todaysWeather);
+        // clears search box after button is clicked and result is fetched.
+        $("#search-input").val("");
     });
 
 });
