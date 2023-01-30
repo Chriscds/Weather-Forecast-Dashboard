@@ -33,7 +33,7 @@ $("#search-button").on("click", function (event) {
     var kelvin = response.main.temp;
     var celsius = kelvin -273.15;
     var degreesSymbol = '\u00B0';
-    
+
     // Current weather icon for today
     var currentIcon = response.weather[0].icon;
     todaysIcon = weatherIcon + currentIcon + "@2x.png";
@@ -76,7 +76,7 @@ $("#search-button").on("click", function (event) {
 
     // Wind (p)
     var windSpeed = response.wind.speed;
-    var windToday = $('<p>').text("Wind speed: " + windSpeed + " mph"); // check if kph is the correct value
+    var windToday = $('<p>').text("Wind speed: " + windSpeed + " mps"); // check if kph is the correct value
     todaysWeather.append(windToday);
 
     // Humidity (p)
