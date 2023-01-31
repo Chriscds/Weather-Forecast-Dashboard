@@ -81,7 +81,14 @@ $("#search-button").on("click", function (event) {
         $("#search-input").val("");
     });
 
+    // Build buttons for local storage
+    function buildButtons() {
+
+        var addButton = $("<button>");
+
+    // append button to .list-group
+    }
 // Local storage function using class="list-group" id="history" as targets
-    
+
 
 });
