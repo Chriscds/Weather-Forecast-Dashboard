@@ -11,7 +11,7 @@ Currently, the application will only show the current weather from the users inp
 * JQuery
 
 ## Screenshot
-![Weather Dashboard Screenshot](assets/css/images/weather-dashboard.png)
+![Weather Dashboard Screenshot](assets/images/weather-dashboard.png)
 ## License
 
 Please refer to the LICENSE in the repository.
