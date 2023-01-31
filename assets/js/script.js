@@ -89,21 +89,44 @@ $("#search-button").on("click", function (event) {
 
         var addButton = $("<button>");
         // Adding class to the button
-        a.addClass("recent-search")
+        addButton.addClass("recent-search");
+        citiesName =  $("#search-input").val();
+        addButton.text(citiesName).val();
 
     // append button to .list-group
+        $(".list-group").append(addButton);
+        $("#history").prepend(addButton);
         // } // for loop end ------------------------
 
     }
 // Local storage function using class="list-group" id="history" as targets
 
-    function getSearch() {
-        var searchedResults = localStorage.getItem("#search-input");
-    }
+//     function getSearch() {
+//         var searchedResults = localStorage.getItem("#search-input");
+//         return searchedResults;
+//     }
 
-    function searchedResults() {
-        var storageResults = getSearch();
-    }
-    localStorage.setItem("#search-input", JSON.stringify(storageResults));
+//     function searchedResults() {
+//         var storageResults = getSearch();
+//         storageResults.push();
+//     }
+//     localStorage.setItem("#search-input", JSON.stringify(storageResults));
 
+// });
+//     function searchedInfo() {
+//     $("#history").append(storageResults);
+// };
+// searchedInfo();
+
+    // build on click event for building buttons
+    $("#search-button").on("click", function (event) {
+        event.preventDefault();
+
+        var cityName = $("#search-input").val().trim();
+        cityName.push(cityName);
+
+        buildButtons();
+    });
+    
+    buildButtons()
 });

@@ -32,3 +32,11 @@
 .weather-hr {
     border: 1px solid rgba(0, 0, 0, 0.272);
 }
+
+/* Searched city result buttons */
+.recent-search {
+    display: block !important;
+    width: 72% !important;
+    margin-bottom: 5px;
+    border-radius: 5px !important;
+}
