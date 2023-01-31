@@ -118,7 +118,7 @@ $("#search-button").on("click", function (event) {
 // };
 // searchedInfo();
 
-    // build on click event for building buttons
+    // Click event for adding searched city buttons to html page
     $("#search-button").on("click", function (event) {
         event.preventDefault();
 
@@ -129,4 +129,7 @@ $("#search-button").on("click", function (event) {
     });
     
     buildButtons()
+
+    // Function for seaarched city buttons when clicked
+    $()
 });
