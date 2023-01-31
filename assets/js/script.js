@@ -40,10 +40,11 @@ $("#search-button").on("click", function (event) {
     var iconImage = $("<img>").attr("src", todaysIcon);
     var iconImageNew = JSON.stringify(todaysIcon)
 
-    console.log(todaysIcon);
+    // console log to see if result is correct URL
+    // console.log(todaysIcon);
     // log url query
     // Console logs the result of celsius with only two didgets after the decimal.
-    console.log(celsius.toFixed(2) + " C");
+    // console.log(celsius.toFixed(2) + " C");
 
 // Content to transfer to HTML ----------------------------------------------------------------
 
@@ -51,25 +52,14 @@ $("#search-button").on("click", function (event) {
     // to prepend to ID #today section
     var todaysWeather = $('<div class="current-weather">');
 
-    // variables for different results to store:
-
-    // City (h2)
+// variables for different results to store:
+    // City variable
     var searchedCity = response.name;
-    // var iconTest = $('<img src="http://openweathermap.org/img/wn/">').text(currentIcon + "@2xpng")
-    // var iconCity = ;
     var cityName = $('<h2>').text(searchedCity + " " + today);
-    // var cityName = $('<h2>').text(searchedCity + " " + today + " " + iconImage); // ?????
     todaysWeather.append(cityName);
     iconImage.append(iconImageNew);
 
-    // Date (h2)
-    // var date = response.;
-    var todaysDate;
-
-    // Weather Icon
-    // var weatherIcon = response.
-
-    // Temperature (p)
+    // Temperature variables
     // temperature is coming from variable ln 29 var celsius = kelvin -273.15;
     var tempToday = $('<p>').text("Temp: " + celsius.toFixed(2) + " " + degreesSymbol + "C");
     todaysWeather.append(tempToday);
@@ -90,5 +80,8 @@ $("#search-button").on("click", function (event) {
         // clears search box after button is clicked and result is fetched.
         $("#search-input").val("");
     });
+
+// Local storage function using class="list-group" id="history" as targets
+    
 
 });

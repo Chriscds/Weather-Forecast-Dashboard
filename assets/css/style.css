@@ -23,10 +23,12 @@
     /* display: block !important; */
     margin-top: 5px;
     width: 72% !important;
-    /* margin-left: 8px;; */
-
 }
 /* Weather search input takes the same width as the search-button */
 .weather-search {
     width: 72%;
+}
+/* Sets properties for the horizontal line below search button */
+.weather-hr {
+    border: 1px solid rgba(0, 0, 0, 0.272);
 }
