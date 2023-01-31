@@ -85,17 +85,25 @@ $("#search-button").on("click", function (event) {
     function buildButtons() {
 
         // Possible loop through the searched results
-        for (var i = 0; i < searchResults.length; i++) {
+        // for (var i = 0; i < searchResults.length; i++) {
 
         var addButton = $("<button>");
         // Adding class to the button
         a.addClass("recent-search")
 
     // append button to .list-group
-        }
+        // } // for loop end ------------------------
 
     }
 // Local storage function using class="list-group" id="history" as targets
 
+    function getSearch() {
+        var searchedResults = localStorage.getItem("#search-input");
+    }
+
+    function searchedResults() {
+        var storageResults = getSearch();
+    }
+    localStorage.setItem("#search-input", JSON.stringify(storageResults));
 
 });
