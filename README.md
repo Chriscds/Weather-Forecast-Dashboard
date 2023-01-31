@@ -3,7 +3,8 @@ Weather Dashboard featuring a 5-day forecast.
 
 ## Description
 Weather Dashboard is  a web application featuring a search input for all cities around the world.
-Currently, the application will only show the current weather from the users input, but a full 5 day forecast will be available soon.
+Currently, the application will only show the current weather from the users input, but a full 5 day forecast will be available soon, along with local storage of the users search results.
+You can test the current weather application [here](https://chriscds.github.io/Weather-Forecast-Dashboard/index.html)
 ## Built with
 * HTML5
 * CSS
