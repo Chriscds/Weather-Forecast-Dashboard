@@ -84,9 +84,16 @@ $("#search-button").on("click", function (event) {
     // Build buttons for local storage
     function buildButtons() {
 
+        // Possible loop through the searched results
+        for (var i = 0; i < searchResults.length; i++) {
+
         var addButton = $("<button>");
+        // Adding class to the button
+        a.addClass("recent-search")
 
     // append button to .list-group
+        }
+
     }
 // Local storage function using class="list-group" id="history" as targets
 
