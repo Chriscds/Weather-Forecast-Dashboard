@@ -24,19 +24,27 @@ input {
     text-align: center;
     color: rgb(9, 9, 9);
 }
-/* 
-form {
-    font-size: 24px;
-} */
 
+
+/* weather card container */
 .container {
     position: relative;
-    width: 350px;
-    height: 100px;
+    max-width: 450px !important;
+    height: 600px;
     background: #c1c697;
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
     transition: 0.4s ease-out;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redText {
+    color: blueviolet !important;
 }

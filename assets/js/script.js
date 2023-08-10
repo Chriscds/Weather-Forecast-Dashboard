@@ -8,7 +8,7 @@ var weatherIcon = "http://openweathermap.org/img/wn/";
 var queryUrlAndKey;
 
 // Add date with moment.js 
-var today = moment().format("[(] D [/] MM [/] YYYY [)]");
+var today = moment().format("[:] ddd MMM YYYY ");
 
 // funtion to search on click after input #search-input.
 $("#search-button").on("click", function (event) {
@@ -55,7 +55,7 @@ $("#search-button").on("click", function (event) {
 // variables for different results to store:
     // City variable
     var searchedCity = response.name;
-    var cityName = $('<h2>').text(searchedCity + " " + today);
+    var cityName = $('<h2 class="redText">').text(searchedCity + " " + today);
     todaysWeather.append(cityName);
     iconImage.append(iconImageNew);
 
