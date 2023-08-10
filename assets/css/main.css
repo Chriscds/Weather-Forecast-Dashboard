@@ -1,0 +1,42 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(61, 31, 90) !important; 
+}
+
+h2, form {
+    text-align: center;
+}
+
+input {
+    background: #c1c697;
+    text-align: center;
+    color: rgb(9, 9, 9);
+}
+/* 
+form {
+    font-size: 24px;
+} */
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 100px;
+    background: #c1c697;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s ease-out;
+}
