@@ -12,31 +12,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(61, 31, 90) !important; 
+    background-color: rgba(71, 61, 81, 0.682) !important; 
 }
 
-h2, form {
+h1, h2, form {
     text-align: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 38px !important;
 }
 
 input {
-    background: #c1c697;
+    background: #e0ec79;
     text-align: center;
     color: rgb(9, 9, 9);
 }
-
 
 /* weather card container */
 .container {
     position: relative;
     max-width: 450px !important;
     height: 600px;
-    background: #c1c697;
+    background: linear-gradient(45deg, #b6d686 0%,#cee07f 50%, #cda143 100%);
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
     transition: 0.4s ease-out;
+    box-shadow: -14px -10px 10px 5px rgba(47, 43, 51, 0.6);
 }
 
 .result {
@@ -45,6 +50,13 @@ input {
     justify-content: center;
 }
 
-.redText {
+.centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.cityText {
     color: blueviolet !important;
 }

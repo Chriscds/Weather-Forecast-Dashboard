@@ -5,10 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- <link rel="stylesheet" href="styles/reset.css" /> -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  
+  <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
   <!-- Added moment.js -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
@@ -16,44 +19,24 @@
 </head>
 
 <body>
-  <header class="container-fluid text-center text-white  p-2 weather-header">
-    <h1>Weather Dashboard</h1>
-  </header>
-
-  <!-- max-width for ultra wide resolutions -->
-  <div class="container-fluid" style="max-width: 1400px">
-    <div class="row">
-      <aside class="col-lg-3 pb-3">
-        <h2 id="form-heading" class="mt-1 h3 form-label">
-          Search for a City:
-        </h2>
-        <form id="search-form" class="form">
-          <div class="form-inline form-group">
-            <div class="input-group">
-        <!-- Search input and button -->
-              <input class="form-input weather-search" type="text" id="search-input" placeholder="Enter a City"
-                aria-labelledby="form-heading" aria-controls="today forecast" />
-              <div class="input-group-append btn-block">
-                <button type="submit" class="btn search-button btn-primary" id="search-button" aria-label="submit search">
-                  Search
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-        <!-- changed hr line -->
-        <hr class="hr weather-hr" />
-        <div class="list-group" id="history"></div>
-        <!-- Previous search results into buttons -->
-      </aside>
-
-      <div class="col-lg-9 col-9 pb-3 float-right-lg">
-        <!-- Section for daily weather -->
-        <section id="today" class="mt-3" role="region" aria-live="polite"></section>
-        <!-- Section for forecast -->
-        <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
+  <!-- Weather app -->
+  <div class="container">
+    <h1 id="form-heading" class="m-3 h3 form-label">
+        Weather Dashboard
+      </h1>
+      <hr>
+      <form id="search-form" class="form">
+        <input type="text" class="form-input mt-1 h3 rounded" id="search-input" placeholder="Enter a city here"
+        aria-labelledby="form-heading" aria-controls="today forecast"/>
+      </form>
+      <div class="input-group-append btn-block justify-content-center mt-4">
+        <button type="submit" class="btn search-button btn-dark" id="search-button" aria-label="submit search">
+          Search
+        </button>
       </div>
-    </div>
+      <div class="result mt-2" id="today" role="region" aria-live="polite">
+
+      </div>
   </div>
 
   <!-- Moment.js -->

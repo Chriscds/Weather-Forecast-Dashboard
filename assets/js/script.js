@@ -37,7 +37,7 @@ $("#search-button").on("click", function (event) {
     // Current weather icon for today
     var currentIcon = response.weather[0].icon;
     todaysIcon = weatherIcon + currentIcon + "@2x.png";
-    var iconImage = $("<img>").attr("src", todaysIcon);
+    var iconImage = $('<img class="centerImage">').attr("src", todaysIcon);
     var iconImageNew = JSON.stringify(todaysIcon)
 
     // console log to see if result is correct URL
@@ -55,7 +55,7 @@ $("#search-button").on("click", function (event) {
 // variables for different results to store:
     // City variable
     var searchedCity = response.name;
-    var cityName = $('<h2 class="redText">').text(searchedCity + " " + today);
+    var cityName = $('<h2 class="cityText">').text(searchedCity + " " + today);
     todaysWeather.append(cityName);
     iconImage.append(iconImageNew);
 
